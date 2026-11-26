@@ -63,7 +63,7 @@ CCR = 500 + 角度 / 180 × 2000
 
 换算函数里先夹角度（0~180）保证公式输入合法，再把 CCR 夹到 550~2450 保证输出绝对安全。
 ## 接线
-![接线如图](OOOO/jiexiantu.png)
+![接线如图](jiexiantu.png)
 ## 串口反馈格式
 ```c
 Target=  0  CCR= 550  Pulse=0.550ms
@@ -146,7 +146,7 @@ static void Servo_Init(void)
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 }
 ```
-定义转动函数`Seq_Poll`，按键控制舵机时终止舵机自动转动，首先同步时间，满足延时后使舵机转动下一个定角，并调用发送函数` Servo_Apply`写CCR并发送串口反馈，完成最后一个定角后重新开始
+定义转动函数`Seq_Poll`，按键控制舵机时终止舵机自动转动，首先同步时间，满足延时后使舵机转动下一个定角，并调用发送函数`Servo_Apply`写CCR并发送串口反馈，完成最后一个定角后重新开始
 ```c
 static void Seq_Poll(void)
 {
@@ -279,9 +279,9 @@ int _write(int fd, char *ptr, int len)
 |---|---|---|---|
 | OLED SCL / SDA | PB8 / PB9 | 开漏输出 | 软件 I²C | 
 
-[OLED.c](OOOO/Core/Src/OLED.c)  
-[OLED.h](OOOO/Core/Inc/OLED.h)  
-[OLED_Font.h](OOOO/Core/Inc/OLED_Font.h)  
+[OLED.c](Core/Src/OLED.c)  
+[OLED.h](Core/Inc/OLED.h)  
+[OLED_Font.h](Core/Inc/OLED_Font.h)  
 文件来源：26电控组招新-群文件-第三次培训所用资料.zip    
 更改了引脚配置
 ### main.c
