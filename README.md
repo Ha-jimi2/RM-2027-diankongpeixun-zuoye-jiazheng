@@ -245,7 +245,7 @@ static void Key_Poll(void)
 ```c
 Target=  0  CCR= 550  Pulse=0.550ms
 ```
-![串口助手截图](chuankou.JPG)
+![串口助手截图](chuankou.jpg)
 | 字段 | 取值 | 说明 |
 |---|---|---|
 | Target | 0deg-180deg | 目标角度 |
